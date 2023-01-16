@@ -1,0 +1,310 @@
+.sdp {
+
+    .highlighted_divider {
+        background-color: #e14444;
+        opacity: 1;
+        height: 1px;
+    }
+
+    .highlighted_text {
+        color: #e14444;
+    }
+
+    .banner {
+        background-image: url("../../assets/SDPLandingpage2.jpg");
+        background-size: cover;
+        background-blend-mode: saturation;
+        background-repeat: no-repeat;
+        min-height: 585px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .overlay {
+            opacity: 0.5;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .content {
+            z-index: 5;
+            width: 30%;
+            margin-left: 10%;
+
+            h2 {
+                font-size: 2.25em;
+                color: white;
+            }
+
+            p {
+                margin-top: 20px;
+                font-size: 1.125em;
+                color: white;
+                font-weight: 500;
+            }
+
+            button {
+                margin-top: 20px;
+                // background-color: var(--red);
+                padding: 15px;
+                border-radius: 15px;
+                border: none;
+                color: white;
+                font-size: 1.125em;
+                width: -moz-fit-content;
+                width: fit-content;
+            }
+
+            button::after {
+                display: inline-block;
+                padding-left: 15px;
+                content: "➞";
+                transition: transform 0.5s ease-out;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .sec_3 {
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+
+        h2 {
+            font-size: 2.25em;
+        }
+
+        .content {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .item {
+                width: 26%;
+                margin: 20px 0;
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 40px;
+                }
+
+                h2 {
+                    font-size: 1.5em;
+                    margin: 20px 0;
+                    color: #000;
+                    line-height: 1.1;
+                }
+
+                p {
+                    font-size: 0.9em;
+                    color: #ababab;
+                    padding-right: 100px;
+                }
+            }
+        }
+    }
+
+    .sec_2 {
+        padding: 100px 0;
+        display: flex;
+        width: 80%;
+        margin: auto;
+        flex-direction: column;
+
+        h2 {
+            font-size: 2.25em;
+            font-weight: 500;
+        }
+
+        .content {
+            margin-top: 50px;
+            display: flex;
+
+            .left {
+                width: 50%;
+            }
+
+            .right {
+                width: 50%;
+            }
+
+            h6 {
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+
+            ul {
+                width: 80%;
+                list-style: none;
+                padding-top: 20px;
+
+                li {
+                    font-size: 1.125em;
+                    font-weight: 500;
+                    margin: 5px 0;
+                }
+
+                li::before {
+                    content: "-";
+                    position: absolute;
+                    margin-left: -20px;
+                }
+            }
+        }
+    }
+
+    .faq {
+        padding: 100px 0;
+        width: 80%;
+        margin: auto;
+        display: flex;
+
+        .left {
+            width: 30%;
+
+            h2 {
+                font-size: 2.25em;
+            }
+        }
+
+        .right {
+            width: 70%;
+        }
+    }
+
+    .form_section {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        padding: 100px 0;
+
+        .left {
+            width: 50%;
+
+            h2 {
+                font-size: 2.25em;
+                font-weight: 500;
+            }
+
+            img {
+                width: 60%;
+            }
+        }
+
+        .right {
+            width: 50%;
+
+            .form_div {
+                height: 100%;
+                overflow: scroll;
+            }
+
+            .form_div::-webkit-scrollbar {
+                display: none;
+                -ms-overflow-style: none;
+                /* IE and Edge */
+                scrollbar-width: none;
+                /* Firefox */
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                -ms-overflow-style: none;
+                /* IE and Edge */
+                scrollbar-width: none;
+                /* Firefox */
+            }
+
+            iframe::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 680px) {
+        .banner {
+            // background: url("../../Assets/SDPLandingpage2.jpg");
+            background-position: 87% 50%;
+            background-size: cover;
+
+            .content {
+                width: 100%;
+
+                h2 {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .sec_3 {
+            .content {
+                .item {
+                    width: 100%;
+                    align-items: center;
+
+                    p {
+                        padding: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .sec_2 {
+            .content {
+                flex-direction: column;
+
+            }
+        }
+        .sec_3 {
+        text-align: center;
+        }
+
+
+        .form_section {
+            flex-direction: column;
+            padding: 20px 0;
+
+            .left {
+                display: flex;
+                width: 100%;
+                padding-bottom: 30px;
+            }
+
+            .right {
+                width: 100%;
+
+                .form_div {
+                    height: 500px;
+                }
+            }
+        }
+
+        .faq {
+
+            padding: 100px 10%;
+            flex-direction: column;
+            width: 100%;
+
+            .left {
+                width: 100%;
+                align-items: center;
+
+            }
+
+            .right {
+                width: 100%;
+            }
+        }
+
+
+    }
+
+}
